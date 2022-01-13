@@ -23,10 +23,11 @@ arr_t_algo = np.empty(n)
 arr_t_python = np.empty(n)
 for i in range(1,n+1):
     t0=time()
-    arr_len[i-1] = len(str(sev_pow_thr_pow(i)))
+    val = sev_pow_thr_pow(i)
     t1=time()
-    len(str(7**(3**n)))
+    val=7**(3**i)
     t2 = time()
+    arr_len[i-1] = len(str(val))
     arr_t_algo[i-1] = t1-t0
     arr_t_python[i-1] = t2-t1
     print(i)
